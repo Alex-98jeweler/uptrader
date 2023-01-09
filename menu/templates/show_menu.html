@@ -1,4 +1,11 @@
 
 {% for item in menu %}
-    <li>{{item.name}}</li>
+    <li><a href="#">{{item.name}}</a></li>
+    {% if item.children %}
+        <ul>
+            {% for child in item.children %}
+                <li><a href="#">{{child.name}}</a></li>
+            {%endfor%}
+        </ul>
+    {% endif %}
 {% endfor %}
