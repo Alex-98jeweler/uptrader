@@ -8,4 +8,6 @@ def index(request):
     return render(request, "index.html", {'items': menus})
 
 def menu_view(request, pk):
-    pass
+    context = {}
+    context["pk"] = pk
+    return render(request, 'menu_detail.html', context)
