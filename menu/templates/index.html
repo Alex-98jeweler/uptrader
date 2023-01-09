@@ -8,8 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>HELLO MENU DRAWER</h1>
     <ul>
-        {% draw name="Main Menu" %}
+    {% for item in items %}
+        <li><a href="{{ item.get_absolute_url }}">{{item.name}}</a></li>
+    {% endfor %}
     </ul>
 </body>
 </html>
