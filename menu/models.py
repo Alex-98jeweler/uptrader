@@ -7,7 +7,9 @@ class Menu(models.Model):
     def __str__(self) -> str:
         return self.name
 
-
+    def get_absolute_url(self):
+        return "%s" % self.pk
+  
 
 class MenuItem(models.Model):
     name = models.CharField(max_length=256)
