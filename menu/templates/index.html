@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load draw_menu %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,7 @@
     <title>Start Page</title>
 </head>
 <body>
-    <h1>HELLO MENU DRAWER</h1>
+    <h1>I Have such menus</h1>
     <ul>
     {% for item in items %}
         <li><a href="{{ item.get_absolute_url }}">{{item.name}}</a></li>
