@@ -7,7 +7,7 @@ def index(request):
     menus = Menu.objects.all()
     return render(request, "index.html", {'items': menus})
 
-def menu_view(request, pk):
+def menu_view(request, name):
     context = {}
-    context["pk"] = pk
+    context["name"] = name
     return render(request, 'menu_detail.html', context)

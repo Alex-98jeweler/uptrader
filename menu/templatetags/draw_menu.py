@@ -7,8 +7,8 @@ register = template.Library()
 
 
 @register.inclusion_tag("show_menu.html", name="draw")
-def show_menu(pk):
-    menu = models.Menu.objects.get(pk=pk)
+def show_menu(name):
+    menu = models.Menu.objects.get(name=name)
     try:
         resp = {"menu": []}
         items = models.MenuItem.objects.filter(menu=menu).filter(parent=None)
